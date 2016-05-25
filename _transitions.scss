@@ -1,0 +1,41 @@
+  
+// creates a cubic-bezier transition. more controllable easing
+// $speed - relates to the overall speed of the transition
+
+// x1, y1, x2, y2
+// Define the start and end of the curve
+
+// x1 and x2 must be in the range [0, 1] or the value is invalid.
+// if y2 is greater then 1, a bouncing effect is created
+
+@mixin cubic-bezier_transtion($speed, $x1, $y1, $x2, $y2){
+	transition: all $speed cubic-bezier($x1, $y1, $x2, $y2);
+	-webkit-transition: all $speed cubic-bezier($x1, $y1, $x2, $y2);
+	-moz-transition: all $speed cubic-bezier($x1, $y1, $x2, $y2);
+	-o-transition: all $speed cubic-bezier($x1, $y1, $x2, $y2);
+}
+
+// creates an ease in and out transition
+
+@mixin ease-in-out_transition($speed){
+	-webkit-transition: all $speed ease-in-out;
+	-o-transition: all $speed ease-in-out;
+	transition: all $speed ease-in-out; 
+}
+
+// creates a transition either along the X axis or the Y axis
+// $amount - dictates by how much the transition should go
+
+@mixin translateX_transition($amount){
+	transform: translateX($amount);
+	-webkit-transform: translateX($amount);
+	-moz-transform: translateX($amount);
+	-o-transform: translateX($amount);
+}
+
+@mixin translateY_transition($amount){
+	transform: translateY($amount);
+	-webkit-transform: translateY($amount);
+	-moz-transform: translateY($amount);
+	-o-transform: translateY($amount);
+}

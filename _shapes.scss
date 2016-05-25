@@ -1,0 +1,17 @@
+// creates a square
+// good for testing size alignments
+
+@mixin square($w, $h, $colour) {
+	width: $w;
+	height: $h;
+	background: $colour;
+}
+
+@mixin circle($w, $h, $colour, $radius) {
+	width: $w;
+	height: $h;
+	background: $colour;
+	-moz-border-radius: $radius;
+	-webkit-border-radius: $radius;
+	border-radius: $radius;
+}

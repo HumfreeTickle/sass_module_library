@@ -1,0 +1,9 @@
+
+/* Set background image to fixed (don't scroll along with the page) */
+
+@mixin parallax-bg($attachment: fixed, $position: bottom right, $size: cover, $repeat: no-repeat){
+	background-attachment: $attachment;
+	background-position: $position;
+	background-size: $size;
+	background-repeat: $repeat;
+}
